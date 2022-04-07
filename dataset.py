@@ -34,4 +34,5 @@ class HorseZebraDataset(Dataset):
             augmentations = self.transform(image = zebra_img, image0 = horse_img)
             zebra_img = augmentations["image"]
             horse_img = augmentations["image0"]
-            
+        
+        return zebra_img, horse_img
