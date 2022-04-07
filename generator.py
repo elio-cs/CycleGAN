@@ -63,7 +63,6 @@ def test():
     img_size = 256
     x = torch.randn((2, img_channels, img_size, img_size))
     gen = Generator(img_channels, 9)
-    print(gen)
     print(gen(x).shape)
 
 if __name__ == "__main__":
