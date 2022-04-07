@@ -26,7 +26,7 @@ class Discriminator(nn.Module):
 				padding=1,
 				padding_mode="reflect",
 			),
-			nn.LeakyRelu(0.2),
+			nn.LeakyReLU(0.2),
 		)
 
 		layers = []
