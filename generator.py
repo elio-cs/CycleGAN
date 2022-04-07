@@ -17,7 +17,7 @@ class ConvBlock(nn.Module):
 
 class ResidualBlock(nn.Module):
     def __init__(self, channels):
-        super.__init__()
+        super().__init__()
         self.block = nn.Sequential(
             ConvBlock(channels, channels, kernel_size=3, padding=1),
             ConvBlock(channels, channels, use_act=False, kernel_size=3, padding=1),
