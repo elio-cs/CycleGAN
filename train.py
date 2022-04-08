@@ -13,7 +13,7 @@ from torchvision.utils import save_image
 from discriminator import Discriminator
 from generator import Generator
 
-def train_fn():
+def train_fn(disc_H, disc_Z, gen_H, gen_Z, loader, opt_disc, opt_gen, L1, mse, d_scaler, g_scaler):
     pass
 
 def main():
