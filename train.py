@@ -20,7 +20,7 @@ def train_fn(disc_H, disc_Z, gen_H, gen_Z, loader, opt_disc, opt_gen, L1, mse, d
         zebra = zebra.to(config.DEVICE)
         horse = horse.to(config.DEVICE)
 
-        with torch.cuda.amp.autocast()
+        with torch.cuda.amp.autocast():
             fake_horse = gen_H(zebra)
             D_H_real = disc_H(horse)
             D_H_fake = disc_H(fake_horse.detach())
