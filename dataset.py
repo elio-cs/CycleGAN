@@ -1,6 +1,6 @@
 from PIL import Image
 import os
-import config
+from torch.utils.data import Dataset
 import numpy as np
 
 class HorseZebraDataset(Dataset):
