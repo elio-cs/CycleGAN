@@ -54,14 +54,14 @@ def train_fn(disc_H, disc_Z, gen_H, gen_Z, loader, opt_disc, opt_gen, L1, mse, d
             # cycle loss
             cycle_zebra = gen_Z(fake_horse)
             cycle_horse = gen_H(fake_zebra)
-            cycle_zebra_loss = l1(zebra, cycle_zebra)
-            cycle_horse_loss = l1(horse, cycle_horse)
+            cycle_zebra_loss = L1(zebra, cycle_zebra)
+            cycle_horse_loss = L1(horse, cycle_horse)
 
             # identity loss
-            indentity_zebra = gen_Z(horse)
-            indentity_horse = gen_H(zebra)
-            identity_zebra_loss = l1(zebra, identity_zebra)
-            identity_horse_loss = l1(horse, identity_horse)
+            identity_zebra = gen_Z(horse)
+            identity_horse = gen_H(zebra)
+            identity_zebra_loss = L1(zebra, identity_zebra)
+            identity_horse_loss = L1(horse, identity_horse)
 
             # add all together
             G_loss = (
